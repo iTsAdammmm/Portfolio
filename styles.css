@@ -816,16 +816,31 @@ footer {
     }
     
     .hero-visual {
-        order: -1;
-        margin-bottom: 40px;
+        order: 2;
+        margin-top: 40px;
+        margin-bottom: 0;
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
     }
     
-    .hero-card {
-        top: 0;
+    .hero-card, .secondary-card {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+        max-width: 320px;
+        animation: none; /* remove floating animation for stable stacking if needed, or keep it */
     }
     
-    .secondary-card {
-        bottom: 0;
+    .abstract-sphere {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
     }
 }
 

@@ -816,8 +816,7 @@ footer {
     }
     
     .hero-visual {
-        order: -1;
-        margin-bottom: 40px;
+        margin-top: 40px;
     }
     
     .hero-card {

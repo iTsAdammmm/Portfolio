@@ -43,7 +43,7 @@ setTimeout(() => {
 // Basic form submission handler (prevent default)
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
@@ -52,18 +52,42 @@ if (contactForm) {
         submitBtn.style.opacity = '0.8';
         submitBtn.style.cursor = 'not-allowed';
         
-        // Simulate API call delay
-        setTimeout(() => {
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            submitBtn.style.background = 'linear-gradient(135deg, #00ffca, #00d2ff)';
-            contactForm.reset();
+        // Prepare data
+        const formData = new FormData(contactForm);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            });
+            const result = await response.json();
             
+            if (response.status === 200) {
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                submitBtn.style.background = 'linear-gradient(135deg, #00ffca, #00d2ff)';
+                contactForm.reset();
+            } else {
+                console.log(response);
+                submitBtn.innerHTML = '<i class="fas fa-times"></i> Error! Try Again';
+                submitBtn.style.background = 'linear-gradient(135deg, #ff416c, #ff4b2b)';
+            }
+        } catch (error) {
+            console.log(error);
+            submitBtn.innerHTML = '<i class="fas fa-times"></i> Error! Try Again';
+            submitBtn.style.background = 'linear-gradient(135deg, #ff416c, #ff4b2b)';
+        } finally {
             setTimeout(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.style.background = '';
                 submitBtn.style.opacity = '1';
                 submitBtn.style.cursor = 'pointer';
             }, 3000);
-        }, 1500);
+        }
     });
 }

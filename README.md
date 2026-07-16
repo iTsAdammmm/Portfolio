@@ -25,14 +25,18 @@ This portfolio is built entirely from scratch without heavy frameworks, relying 
 - **Invisible Maze Game** (Algorithm Design & Logic)
 
 ## 💻 Tech & Skills Profile
-- **Systems & Embedded Dev:** C, Java, Python
-- **Core Knowledge:** Data Structures, Algorithms, OS, DBMS
-- **Databases:** PostgreSQL, MySQL, JDBC
-- **Soft Skills:** Leadership, Project Documentation, Time Management, Sponsorship Coordination
+- **Embedded & Systems:** Real-Time Systems, System-Level Programming, Embedded Systems, CAN Protocol, Bus Arbitration, SocketCAN
+- **Programming:** C, C++, Python, Java, SQL
+- **Core:** Data Structures & Algorithms, Operating Systems, DBMS, Computer Networks
+- **Computer Vision:** OpenCV, Image Processing
+- **Databases:** MySQL, PostgreSQL
+- **Tools:** Git, GitHub
+- **Other:** REST APIs, Basic Linux
+- **Soft Skills:** Leadership, Communication, Team Collaboration
 
 ## 🤝 Let's Connect!
 
-I am actively seeking internship opportunities in Embedded Systems, Computer Vision, and Automotive Software Engineering! Let's build the future of mobility together.
+I am interested in Embedded Systems, Computer Vision, and Automotive Software Engineering! Let's build the future of mobility together.
 
 - **Email:** adamash1205@gmail.com
 - **LinkedIn:** [adam-ashish](https://linkedin.com/in/adam-ashish)

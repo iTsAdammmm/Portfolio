@@ -25,7 +25,7 @@ This portfolio is built entirely from scratch without heavy frameworks, relying 
 - **Invisible Maze Game** (Algorithm Design & Logic)
 
 ## 💻 Tech & Skills Profile
-- **Embedded & Systems:** Real-Time Systems, System-Level Programming, Embedded Systems, CAN Protocol, Bus Arbitration, SocketCAN
+- **Embedded Systems:** Real-Time Systems, System-Level Programming, Embedded Systems, CAN Protocol, Bus Arbitration, SocketCAN
 - **Programming:** C, C++, Python, Java, SQL
 - **Core:** Data Structures & Algorithms, Operating Systems, DBMS, Computer Networks
 - **Computer Vision:** OpenCV, Image Processing
